@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" href="img/iconos/favicon.ico" type="image/x-icon">
     <title> La Indumentaria</title>
 </head>
@@ -26,17 +26,77 @@
     </header>
 
     <main>
-    
-        <section id="contacto" class="secciones">
-            
-            </div>
+
+        <section id="cajacontacto">
+            <div class="contenedor-contacto">
+
+                <div class="item-contacto">
+                    <h2>VENI A VISITARNOS</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4815178678923!2d-58.451699299999994!3d-34.5666808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d01fac1b6f%3A0x193f15df5a169d41!2sAv.%20Cabildo%201562%2C%20C1426%20CABA!5e0!3m2!1ses-419!2sar!4v1682911024505!5m2!1ses-419!2sar"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div id="ubicacion">
+                        <p>Encontranos en Belgrano</p>
+                        <p> Av Cabildo 1562, CABA. Abiertos de Lunes a Sábados de 10hs a 18hs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="item-contacto">
+                    <h2 class="tag">ESCRIBINOS</h2>
+                    <form id="form-contacto" class="form">
+                        <label for="name">Nombre Completo <span>*</span><span id="name-invalid"></span></label>
+                        <input onfocusout="check_inputs('name')" onkeydown="clear_error('name')" name="name" required
+                            type="text" id="name" placeholder="Lorena Vera" />
+                        <label for="email">Correo electrónico <span>*</span> <span id="mail-invalid"></span></label>
+                        <input onfocusout="check_inputs('mail')" onkeyup="clear_error('mail')" name="email" type="text"
+                            id="email" required placeholder="tuemail@gmail.com" />
+                        <label for="name">Teléfono <span>*</span><span id="name-invalid"></span></label>
+                        <input onfocusout="check_inputs('name')" onkeydown="clear_error('name')" name="name" required
+                            type="text" id="name" placeholder="011..." />
+                        <label for="message">Mensaje <span id="text-invalid"></span></label>
+                        <textarea onfocusout="check_inputs('text')" onkeyup="clear_error('text')" id="message"
+                            name="message" id="" cols="30" rows="6" placeholder="Tu consulta/pedido"
+                            maxlength="300"></textarea>
+                        <div id="submit-button-container">
+                            <a id="submit-button" onclick="check_all_inputs()" class="btn primary full">Enviar
+                                mensaje</a>
+                        </div>
+                    </form>
+                </div>
         </section>
+
+        </div>
+
+
+
+
     </main>
 
     <footer>
 
-    </footer>
 
+        <div class="cajacontacto">
+
+            <p class="titulofooter">CONTACTANOS</p>
+            <img class="iconos" src="img/iconos/telefono.png" alt="">
+            <p> 47837935 / CEL: 1164895861</p>
+            <br>
+            <img class="iconos" src="img/iconos/email.png" alt="">
+            <p> laindumentaria@gmail.com</p>
+            <br>
+            <img class="iconos" src="img/iconos/ubicacion.png" alt="">
+            <p> Av Cabildo 1562, CABA </p>
+
+
+        </div>
+
+        <div class="cajaiconos">
+            <p class="titulofooter">REDES </p>
+            <a href="#"><img class="iconospie" src="img/iconos/instagram.png " alt=""></a>
+            <a href="#"><img class="iconospie" src="img/iconos/twitter.png" alt=""></a>
+        </div>
+    </footer>
 </body>
 
 </html>
