@@ -49,11 +49,11 @@
                         <input onfocusout="check_inputs('name')" onkeydown="clear_error('name')" name="name" required
                             type="text" id="name" placeholder="Lorena Vera" />
                         <label for="email">Correo electrónico <span>*</span> <span id="mail-invalid"></span></label>
-                        <input onfocusout="check_inputs('mail')" onkeyup="clear_error('mail')" name="email" type="text"
+                        <input onfocusout="check_inputs('mail')" onkeyup="clear_error('mail')" name="email" type="email"
                             id="email" required placeholder="tuemail@gmail.com" />
                         <label for="name">Teléfono <span>*</span><span id="name-invalid"></span></label>
                         <input onfocusout="check_inputs('name')" onkeydown="clear_error('name')" name="name" required
-                            type="text" id="name" placeholder="011..." />
+                            type="number" id="name" placeholder="011..." />
                         <label for="message">Mensaje <span id="text-invalid"></span></label>
                         <textarea onfocusout="check_inputs('text')" onkeyup="clear_error('text')" id="message"
                             name="message" id="" cols="30" rows="6" placeholder="Tu consulta/pedido"
