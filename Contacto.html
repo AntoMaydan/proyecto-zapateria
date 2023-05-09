@@ -46,24 +46,33 @@
 
                 <div class="item-contacto">
                     <h2 class="tag">ESCRIBINOS</h2>
-                    <form id="form-contacto" class="form">
-                        <label for="name">Nombre Completo <span>*</span><span id="name-invalid"></span></label>
-                        <input onfocusout="check_inputs('name')" onkeydown="clear_error('name')" name="name" required
-                            type="text" id="name" placeholder="Lorena Vera" />
-                        <label for="email">Correo electrónico <span>*</span> <span id="mail-invalid"></span></label>
-                        <input onfocusout="check_inputs('mail')" onkeyup="clear_error('mail')" name="email" type="email"
-                            id="email" required placeholder="tuemail@gmail.com" />
-                        <label for="name">Teléfono <span>*</span><span id="name-invalid"></span></label>
-                        <input onfocusout="check_inputs('name')" onkeydown="clear_error('name')" name="name" required
-                            type="number" id="name" placeholder="011..." />
-                        <label for="message">Mensaje <span id="text-invalid"></span></label>
-                        <textarea onfocusout="check_inputs('text')" onkeyup="clear_error('text')" id="message"
-                            name="message" id="" cols="30" rows="6" placeholder="Tu consulta/pedido"
-                            maxlength="300"></textarea>
-                        <div id="submit-button-container">
-                           <a id="submit-button" onclick="check_all_inputs()" class="btn primary full">Enviar
-                            mensaje</a>
-                        </div>
+                    <form action="https://formspree.io/f/mjvzpjgb" id="form-contacto" method="post" class="form">
+                        <fieldset>
+                            <div class="input-container">
+                                <label  for="name">Nombre</label>
+                                <input name="name" id="name" class="input" type="text" placeholder="Nombre" required data-tipo="nombre" title="el campo nombre no puede estar vacio">
+                                
+                            </div>
+                            <div class="input-container">
+                                <label  for="email">Email</label>
+                                <input name="email" id="email" class="input" type="email" placeholder="Email@ynlom.com" required data-tipo="email"  title="el campo email no puede estar vacio">
+                                
+                            </div>
+                            <div class="input-container">
+                                <label  for="phoneNumber">Número telefónico</label>
+                                <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="xxxx-xxxxxx" pattern="\d{10}" required minlegth="11" maxlength="11" data-tipo="numero" title="El formato requerido es XXXX-XXXXXX 10 números">
+                                <span class="noMostrar" id="mensaje">Error!!!El formato requerido es XXXX - XXXXXX 10 números y espacio </span>
+                            </div>
+                            <div class="input-container">
+                                <label for="">Ingrese sus dudas aqui</label>
+                                <textarea cols="25" rows="5"></textarea>
+                            </div>
+                        
+                            <div id="submit-button-container">
+                               <input id="submit-button" class="btn primary full" type="submit" value="Enviar mensaje">
+                            </div>
+                        </fieldset>
+                        
                     </form>
                 </div>
         </section>
@@ -100,6 +109,8 @@
         </div>
     </footer>
     <script src="./script/script.js"></script>
+    <script src="./script/inputValidar.js"></script>
+    
 </body>
 
 </html>

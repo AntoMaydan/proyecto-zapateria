@@ -1,3 +1,4 @@
+/*------ muenu hamburguesa  ------*/
 
 let menuhamburguesa = document.querySelector(".hamburguer");
 let listaDesplegable = document.getElementById("lista");

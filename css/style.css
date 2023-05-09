@@ -444,6 +444,7 @@ input::-webkit-input-placeholder {
 
 #submit-button-container {
     text-align: center;
+    margin:40px;
 }
 
 #submit-button {
@@ -454,10 +455,12 @@ input::-webkit-input-placeholder {
     background: rgb(254, 220, 205);
     background: radial-gradient(circle, rgb(147, 116, 162) 46%, rgb(56, 31, 61) 92%);
     color: white;
+    
 }
 
 #submit-button:hover {
     opacity: .9;
+    
 }
 
 .contact {
@@ -590,4 +593,18 @@ footer {
     .desaparecer{
         display: none;
     }
+}
+
+/* ----- css validaciones input -----*/
+
+.noMostrar{
+    display: none;
+    font-weight: bold;
+    color: #da1414;
+    text-align: center;
+    margin: 5px;
+}
+.mostrar{
+    display: block;
+
 }
