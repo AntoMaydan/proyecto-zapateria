@@ -16,9 +16,10 @@ inputTelefono.addEventListener("blur",(event) => {
 const inputNombre = document.querySelector(".inputNombre");
 const mensajeError1 = document.getElementById("mensaje1")
 inputNombre.addEventListener("blur",(event)=>{
-     let validacionNombre = (event.target.value);
-     console.log(validacionNombre);
-     let verificar =/^[^A-Z]+$/g
-     let textoVerificado = verificar.test(validacionNombre)
-     console.log(textoVerificado)
-})
+     let nombre = (event.target.value);
+     let verificacionNombre = nombre[0].toUpperCase() + nombre.slice(1).toLowerCase();
+     verificacionNombre != nombre ? mensajeError1.classList.add("mostrar"):mensajeError1.classList.remove("mostrar");
+}
+)
+
+
