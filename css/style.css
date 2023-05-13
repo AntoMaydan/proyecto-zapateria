@@ -599,12 +599,13 @@ footer {
 
 .noMostrar{
     display: none;
+    
+}
+.mostrar{
+    display: block;
     font-weight: bold;
     color: #da1414;
     text-align: center;
     margin: 5px;
-}
-.mostrar{
-    display: block;
 
 }
