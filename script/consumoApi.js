@@ -1,15 +1,15 @@
-const crearTarjetas = (articulo,precio,talle) =>{
+const crearTarjetas = (img,articulo,precio,talle) =>{
     let tarjeta = document.createElement("div");
     let contenido= `
         <div class="grid-item catalogo-item">
-            <img class="img-catalogo" src="img/1botastrento.png" alt="">
+            <img class="img-catalogo" src=${img} alt="">
             <p class="titulo-producto">${articulo}</p>
             <p>${precio}</p> 
             <p>${talle}</p>
         </div>
     
         `
-    tarjeta.innerHTML=contenido
+    tarjeta.innerHTML = contenido
     return tarjeta
 }
 
@@ -19,12 +19,23 @@ const container = document.querySelector("[data-table]");
 console.log(container)
 
 const traerInfo = async()=>{
-    await fetch ("http://localhost:4001/todosLosArticulos")
+   let info = await fetch ("http://localhost:4001/todosLosArticulos")
             .then((res)=>res.json())
-            .then((res)=>respuesta(res))
+            .catch(error => console.log("HAY UN ERROR!!" +error))
+    return info
 }
 
-traerInfo()
+const mostrarInfo =async ()=>{
+    let dato= await traerInfo()
+    let infoArticulos = dato.map((elemento) => { 
+        const crearEtiqueta = crearTarjetas(elemento.img,elemento.articulo,elemento.precio,elemento.talle);
+        container.appendChild(crearEtiqueta)
+    })
+    return infoArticulos
+}
+
+mostrarInfo()
+
 
 
 
