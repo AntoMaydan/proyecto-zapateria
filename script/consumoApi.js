@@ -19,7 +19,7 @@ const container = document.querySelector("[data-table]");
 console.log(container)
 
 const traerInfo = async()=>{
-   let info = await fetch ("http://localhost:4001/todosLosArticulos")
+   let info = await fetch ("https://api-zapateria-render.onrender.com/todosLosArticulos")
             .then((res)=>res.json())
             .catch(error => console.log("HAY UN ERROR!!" +error))
     return info
